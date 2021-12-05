@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Chain of Good</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Contact-Form-Clean.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Newsletter-Subscription-Form.css') }}">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top navbar-custom">
+        <div class="container"><a class="navbar-brand" href="#">Chain Of good</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="">Go to top</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center text-white masthead">
+        <div class="masthead-content">
+            <div class="container">
+                <h1 class="masthead-heading mb-0">Chain Of Good</h1>
+                <h2 class="masthead-subheading mb-0">Volunteer to help an under-privilegged kid gain knowledge..</h2>
+            </div>
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='images/01.jpg') }}"></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">For those who care</h2>
+                        <p>Chain of Good is an initiative to help poor children gain skills and knowledge so that they can secure long term employments / businesses to support themselves and their families.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <section class="newsletter-subscribe">
+                <div class="container">
+                    <div class="intro">
+                        <h2 class="text-center">Nominate children to get help via this website</h2>
+                        <p class="text-center">Use the form given bellow to fill out relevant information regarding their domain, contact, age and location. We'll send them a confirmation message once their info has been submitted.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <section class="contact-clean">
+                        <form method="post" action="/students/add">
+                            <div class="mb-3"><input class="form form-control" type="text" name="name" placeholder="Name"></div>
+                            <div class="mb-3"><input class="form form-control" type="text" name="age" placeholder="Age"></div>
+                            <div class="mb-3"><input class="form form-control" type="text" name="contact" placeholder="Contact Number"></div>
+                            <div class="mb-3"><input class="form form-control" type="text" name="location" placeholder="Location"></div>
+                            <div class="mb-3"><input class="form form-control" type="text" name="domain" placeholder="Domain"></div>
+                            <div class="mb-3"><input class="form form-control" type="text" name="picture" placeholder="Photograph URL"></div>
+                            <div class="mb-3"><button class="btn btn-primary" type="submit">Submit</button></div>
+                        </form>
+                    </section>
+                </div>
+                <section class="newsletter-subscribe">
+                    <div class="container">
+                        <div class="intro">
+                            <h2 class="text-center">Volunteer for kids..</h2>
+                            <p class="text-center">Given Bellow is a list of children whose information is available in the block chain right now. Please check the domain in which you'd be able to contribute and volunteer to help them...</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+        </div>
+
+        <div id="studentsRow" class="row">
+          <!-- PETS LOAD HERE -->
+        </div>
+      </div>
+        <div id="studentTemplate" style="display: none;">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="panel panel-default panel-student">
+              <div class="panel-heading">
+                <h3 class="panel-title">Scrappy</h3>
+              </div>
+              <div class="panel-body">
+                <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;" src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg" data-holder-rendered="true">
+                <br/><br/>
+                <strong>Domain</strong>: <span class="student-domain">Golden Retriever</span><br/>
+                <strong>Age</strong>: <span class="student-age">3</span><br/>
+                <strong>Location</strong>: <span class="student-location">Warren, MI</span><br/><br/>
+                <button class="btn btn-success btn-adopt" type="button" data-id="0">Volunteer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <br>
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="text-center text-white m-0 small">Made with LOVE by Abhigya Shridhar</p>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/web3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/truffle-contract.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
