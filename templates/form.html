@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}" />
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                    <form  action="/verify" method="post">
+                      <div class="card1">
+                          <div class="left">
+                              <div class="form-control">
+                                  <input name="code" type="text" required="required" placeholder="Enter OTP">
+                                  <span>Code Sent</span>
+                                  <i class="fa fa-users"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <button class="button" type="submit">Verify</button>
+                    </form>
+            </div>
+        </div>
+    </body>
+</html>
